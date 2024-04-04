@@ -101,7 +101,7 @@ def find_client(conn, first_name=None, last_name=None, email=None, number=None):
         return select_client
 
 
-with psycopg2.connect(database="clients", user="postgres", password="530496", host='localhost', port='5432') as conn:
+with psycopg2.connect(database='clients', user='postgres', password='', host='localhost', port='5432') as conn:
     create_db(conn)
     print(add_client(conn, 'Ivan', 'Petrov', 'ivan@mail.ru'))
     print(add_phone_number(conn, 1, '+78881234567'))
